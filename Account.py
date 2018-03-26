@@ -1,3 +1,3 @@
-class Account():
+class Account:
     def __init__(self):
-        pass
+        self.balance = 0
