@@ -5,5 +5,5 @@ def test_Account():
     assert account.balance == 0
     account.deposit(1000)
     assert account.balance == 1000
-    account.withdrawal(500)
+    account.withdraw(500)
     assert account.balance == 500
