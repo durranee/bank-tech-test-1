@@ -9,6 +9,12 @@ Fork this repo
 
 ## Running the tests
 
+To install FreezeGun, simply:
+
+```
+pip install freezegun
+```
+
 To run tests you need to install Pytest in the root of the project.
 
 ```
