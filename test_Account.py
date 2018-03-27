@@ -21,8 +21,10 @@ def test_Account_withdraw(account):
     account.withdraw(500)
     assert account.balance == 500
 
+@freeze_time("2018-01-18")
 def test_Account_history(account):
     account
-    assert account.history == [['18/01/2018', 1000.00, False, 1000.00]]
+    assert account.history == [['18/01/2018', 1000, False, 1000]]
     account.withdraw(1000)
-    assert account.history == [['18/01/2018', False, 1000.00, 0.00]]
+    print(account.history)
+    assert account.history == [['18/01/2018', 1000, False, 1000], ['18/01/2018', False, 1000, 0]]
