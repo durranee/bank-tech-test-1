@@ -21,3 +21,5 @@ class Account:
 
     def withdraw(self, amount):
         self.balance -= amount
+        date = datetime.date.today().strftime("%d/%m/%Y")
+        self.save_transaction(date, False, amount, self.balance)
