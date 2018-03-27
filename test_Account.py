@@ -24,3 +24,5 @@ def test_Account_withdraw(account):
 def test_Account_history(account):
     account
     assert account.history == [['18/01/2018', 1000.00, False, 1000.00]]
+    account.withdraw(1000)
+    assert account.history == [['18/01/2018', False, 1000.00, 0.00]]
