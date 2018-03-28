@@ -30,7 +30,7 @@ def test_Processor_to_string():
     process = Processor(mock_account.history)
     process.to_string()
     assert process.partial_history == [
-        ['10/01/2012', '1000.00', '', '1000.00'],
-        ['13/01/2012', '2000.00', '', '3000.00'],
-        ['14/01/2012', '', '500.00', '2500.00']
+        ['10/01/2012', '1000', 'False', '1000'],
+        ['13/01/2012', '2000', 'False', '3000'],
+        ['14/01/2012', 'False', '500', '2500']
     ]
