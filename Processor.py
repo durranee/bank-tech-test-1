@@ -6,3 +6,7 @@ class Processor:
 
     def reverse(self):
         self.partial_history = list(reversed(self.partial_history))
+
+    def to_string(self):
+        for transaction in self.partial_history:
+            transaction[:] = [str(value) for value in transaction]
