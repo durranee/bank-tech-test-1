@@ -4,10 +4,5 @@ class Processor:
         date || credit || debit || balance"""
         self.partial_history = account_history
 
-    def process_history(self):
-        self.partial_history = self.reverse()
-
     def reverse(self):
-        return list(reversed(self.partial_history))
-
-    
+        self.partial_history = list(reversed(self.partial_history))
