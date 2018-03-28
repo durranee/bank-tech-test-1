@@ -8,6 +8,11 @@ mock_account.history = [
     ['13/01/2012', 2000, False, 3000],
     ['14/01/2012', False, 500, 2500]
 ]
+# history = [
+#     ['10/01/2012', 1000, False, 1000],
+#     ['13/01/2012', 2000, False, 3000],
+#     ['14/01/2012', False, 500, 2500]
+# ]
 
 def test_Processor():
     process = Processor(mock_account.history)
@@ -16,3 +21,13 @@ def test_Processor():
     14/01/2012 || || 500.00 || 2500.00
     13/01/2012 || 2000.00 || || 2500.00
     10/01/2012 || 1000.00 || || 2500.00"""
+
+def test_Processor_reverse():
+    process = Processor(mock_account.history)
+    print(mock_account.history)
+    process.process_history()
+    assert process.partial_history == [
+        ['14/01/2012', False, 500, 2500],
+        ['13/01/2012', 2000, False, 3000],
+        ['10/01/2012', 1000, False, 1000]
+    ]
