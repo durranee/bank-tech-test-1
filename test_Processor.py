@@ -11,7 +11,7 @@ mock_account.history = [
 
 def test_Processor():
     process = Processor(mock_account.history)
-    assert process.processed_statement == """
+    assert process.processed_history == """
     date || credit || debit || balance
     14/01/2012 || || 500.00 || 2500.00
     13/01/2012 || 2000.00 || || 2500.00
