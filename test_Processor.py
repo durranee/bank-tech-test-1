@@ -4,9 +4,9 @@ from Processor import Processor
 mock_account = mock.Mock()
 
 mock_account.history = [
-    ['10/01/2012', 1000, False, 1000],
-    ['13/01/2012', 2000, False, 3000],
-    ['14/01/2012', False, 500, 2500]
+    ['10/01/2012', 1000, '', 1000],
+    ['13/01/2012', 2000, '', 3000],
+    ['14/01/2012', '', 500, 2500]
 ]
 
 def test_Processor():
@@ -21,24 +21,14 @@ def test_Processor_reverse():
     process = Processor(mock_account.history)
     process.reverse()
     assert process.partial_history == [
-        ['14/01/2012', False, 500, 2500],
-        ['13/01/2012', 2000, False, 3000],
-        ['10/01/2012', 1000, False, 1000]
+        ['14/01/2012', '', 500, 2500],
+        ['13/01/2012', 2000, '', 3000],
+        ['10/01/2012', 1000, '', 1000]
     ]
 
 def test_Processor_to_string():
     process = Processor(mock_account.history)
     process.to_string()
-    assert process.partial_history == [
-        ['10/01/2012', '1000', 'False', '1000'],
-        ['13/01/2012', '2000', 'False', '3000'],
-        ['14/01/2012', 'False', '500', '2500']
-    ]
-
-def test_Processor_remove_false():
-    process = Processor(mock_account.history)
-    process.to_string()
-    process.remove_false()
     assert process.partial_history == [
         ['10/01/2012', '1000', '', '1000'],
         ['13/01/2012', '2000', '', '3000'],

@@ -17,9 +17,9 @@ class Account:
     def deposit(self, amount):
         self.balance += amount
         date = datetime.date.today().strftime("%d/%m/%Y")
-        self.save_transaction(date, amount, False, self.balance)
+        self.save_transaction(date, amount, '', self.balance)
 
     def withdraw(self, amount):
         self.balance -= amount
         date = datetime.date.today().strftime("%d/%m/%Y")
-        self.save_transaction(date, False, amount, self.balance)
+        self.save_transaction(date, '', amount, self.balance)

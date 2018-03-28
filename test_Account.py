@@ -3,8 +3,9 @@ from freezegun import freeze_time
 import datetime
 import pytest
 
-@pytest.fixture(scope="function")
 @freeze_time("2018-01-18")
+
+@pytest.fixture(scope="function")
 def account():
     account = Account()
     account.deposit(1000)
@@ -24,7 +25,6 @@ def test_Account_withdraw(account):
 @freeze_time("2018-01-18")
 def test_Account_history(account):
     account
-    assert account.history == [['18/01/2018', 1000, False, 1000]]
+    assert account.history == [['18/01/2018', 1000, '', 1000]]
     account.withdraw(1000)
-    print(account.history)
-    assert account.history == [['18/01/2018', 1000, False, 1000], ['18/01/2018', False, 1000, 0]]
+    assert account.history == [['18/01/2018', 1000, '', 1000], ['18/01/2018', '', 1000, 0]]
