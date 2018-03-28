@@ -25,3 +25,12 @@ def test_Processor_reverse():
         ['13/01/2012', 2000, False, 3000],
         ['10/01/2012', 1000, False, 1000]
     ]
+
+def test_Processor_to_string():
+    process = Processor(mock_account.history)
+    process.to_string()
+    assert process.partial_history == [
+        ['14/01/2012', '', '500.00', '2500.00'],
+        ['13/01/2012', '2000.00', '', '3000.00'],
+        ['10/01/2012', '1000.00', '', '1000.00']
+    ]
