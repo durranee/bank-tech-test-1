@@ -71,9 +71,9 @@ __Formatter__
 
 The Formatter class takes the account history as a parameter. It has reverse method reverses the order of the lists, the format_integer method which gives the integers two decimal places and converts them into strings. The to_string method  changes the lists into strings and transforms them into strings to complete in the form requested by the project requirements.
 
+![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
 
-
-
+ https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true
 ## User stories
 
 ```
