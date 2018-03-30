@@ -1,7 +1,6 @@
 class Formatter:
     def __init__(self, account_history):
-        self.processed_history = """
-        date || credit || debit || balance"""
+        self.processed_history = "date || credit || debit || balance"
         self.partial_history = account_history
 
     def reverse(self):
@@ -14,3 +13,8 @@ class Formatter:
                     else value for value in transaction]
             new_list.append(line)
         self.partial_history = new_list
+
+    def to_string(self):
+        for transaction in self.partial_history:
+            self.processed_history += "\n"
+            self.processed_history += ' || '.join(transaction)
