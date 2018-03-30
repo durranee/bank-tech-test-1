@@ -65,6 +65,14 @@ It can be used like this:
 
 ![Alt text](https://raw.githubusercontent.com/noel1uk/bank-tech-test/757dbd830d8e7938f010d3b900fcba799d0f668c/images/account.png?raw=true "Optional Title")
 
+The deposit and withdraw methods use the save_transaction method to save transaction details to the history attribute.
+
+__Formatter__
+
+The Formatter class takes the account history as a parameter. It has reverse method reverses the order of the lists, the format_integer method which gives the integers two decimal places and converts them into strings. The to_string method  changes the lists into strings and transforms them into strings to complete in the form requested by the project requirements.
+
+
+
 
 ## User stories
 
