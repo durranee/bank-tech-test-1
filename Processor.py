@@ -7,6 +7,10 @@ class Processor:
     def reverse(self):
         self.partial_history = list(reversed(self.partial_history))
 
-    def to_string(self):
+    def format_integer(self):
+        new_list = []
         for transaction in self.partial_history:
-            transaction[:] = [str(value) for value in transaction]
+            line = ['%.2f' % value if isinstance(value, int)
+                    else value for value in transaction]
+            new_list.append(line)
+        self.partial_history = new_list
