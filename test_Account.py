@@ -8,7 +8,6 @@ import pytest
 def account():
     account = Account()
     account.deposit(1000)
-    account.deposit(1000)
     return account
 
 
