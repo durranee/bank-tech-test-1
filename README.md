@@ -5,23 +5,66 @@ it fits in with my blog which can be found at:
 
 ## Getting Started
 
-Fork this repo
+* Open
+
+```
+git clone https://github.com/noel1uk/bank-tech-test.git
+```
 
 ## Running the tests
-
-To install FreezeGun, simply:
+To run tests you need to install Pytest in the root of the project. You need pip to install Pytest, to install pip:
 
 ```
-pip install freezegun
+sudo easy_install pip
 ```
-
-To run tests you need to install Pytest in the root of the project.
 
 ```
 pip install -U pytest
 ```
 
+To install FreezeGun, simply:
+```
+pip install freezegun
+```
+
+To install Mock
+
+```
+pip install mock
+```
+
 Then type pytest in terminal
+
+
+## Checking the coverage
+
+
+To check for coverage you need to have pytest-cov. Install it with:
+
+```
+pip install pytest-cov
+
+```
+Then type:
+
+```
+py.test --cov ./
+```
+
+## How to use
+
+Got into the directory and open irb or another REPL such as ipython.
+
+It's made up of three classes:
+
+__Account__
+Which has has balance and history attributes.
+It has deposit, withdraw and save_transaction methods.
+
+It can be used like this:
+
+![Alt text](bank-tech-test/images/account.png?raw=true "Optional Title")
+
 
 ## User stories
 
