@@ -63,7 +63,7 @@ It has deposit, withdraw and save_transaction methods.
 
 It can be used like this:
 
-![Alt text](bank-tech-test/images/account.png?raw=true "Optional Title")
+![Alt text](https://raw.githubusercontent.com/noel1uk/bank-tech-test/757dbd830d8e7938f010d3b900fcba799d0f668c/images/account.png?raw=true "Optional Title")
 
 
 ## User stories
