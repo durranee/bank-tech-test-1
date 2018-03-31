@@ -77,7 +77,8 @@ __View__
 
 The View class takes the processed_history attribute from the Formatter class object and prints it to screen.
 
-![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
+![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/view.png?raw=true "Optional Title")
+
 
 ## User stories
 
