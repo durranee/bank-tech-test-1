@@ -5,14 +5,14 @@ it fits in with my blog which can be found at:
 
 ## Getting Started
 
-* Open
+Clone this repo.
 
 ```
 git clone https://github.com/noel1uk/bank-tech-test.git
 ```
 
 ## Running the tests
-To run tests you need to install Pytest in the root of the project. You need pip to install Pytest, to install pip:
+To run tests you need to install Pytest. You need pip to install Pytest, to install pip:
 
 ```
 sudo easy_install pip
@@ -36,6 +36,8 @@ pip install mock
 Then type pytest in terminal
 
 
+![Alt test results text](https://github.com/noel1uk/bank-tech-test/blob/images/images/tests.png?raw=true "Optional Title")
+
 ## Checking the coverage
 
 
@@ -51,6 +53,10 @@ Then type:
 py.test --cov ./
 ```
 
+https://github.com/noel1uk/bank-tech-test/blob/images/images/coverage.png?raw=true
+
+![Alt coverage results text](https://github.com/noel1uk/bank-tech-test/blob/images/images/coverage.png?raw=true "Optional Title")
+
 ## How to use
 
 Got into the directory and open irb or another REPL such as ipython.
@@ -58,12 +64,13 @@ Got into the directory and open irb or another REPL such as ipython.
 It's made up of three classes:
 
 __Account__
+
 Which has has balance and history attributes.
 It has deposit, withdraw and save_transaction methods.
 
 It can be used like this:
 
-![Alt text](https://raw.githubusercontent.com/noel1uk/bank-tech-test/757dbd830d8e7938f010d3b900fcba799d0f668c/images/account.png?raw=true "Optional Title")
+![Alt account class steps text](https://raw.githubusercontent.com/noel1uk/bank-tech-test/757dbd830d8e7938f010d3b900fcba799d0f668c/images/account.png?raw=true "Optional Title")
 
 The deposit and withdraw methods use the save_transaction method to save transaction details to the history attribute.
 
@@ -71,13 +78,21 @@ __Formatter__
 
 The Formatter class takes the account history as a parameter. It has reverse method reverses the order of the lists, the format_integer method which gives the integers two decimal places and converts them into strings. The to_string method  changes the lists into strings and transforms them into strings to complete in the form requested by the project requirements.
 
-![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
+![Alt formatter class steps text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
 
 __View__
 
 The View class takes the processed_history attribute from the Formatter class object and prints it to screen.
 
-![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/view.png?raw=true "Optional Title")
+![Alt view class steps text](https://github.com/noel1uk/bank-tech-test/blob/images/images/view.png?raw=true "Optional Title")
+
+
+## Things to improve
+
+* You can now only enter full integers.
+* Some of the functionality of the Account class, the transaction history could perhaps be extracted into a class of its own.
+* Some of the formatting takes place in the account class, specifically the deposit and withdraw methods both use strftime which formats the date. This would be better placed in the Formatter class
+
 
 
 ## User stories
