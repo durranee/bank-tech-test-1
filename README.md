@@ -92,7 +92,8 @@ The View class takes the processed_history attribute from the Formatter class ob
 * You can now only enter full integers.
 * Some of the functionality of the Account class, the transaction history could perhaps be extracted into a class of its own.
 * Some of the formatting takes place in the account class, specifically the deposit and withdraw methods both use strftime which formats the date. This would be better placed in the Formatter class
-
+* Write tests for edge cases such as what happens when withdrawals are made when no money is in the account.
+* Make a feature test that tests to whole process.
 
 
 ## User stories
@@ -135,3 +136,5 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+## My approach
