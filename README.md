@@ -73,7 +73,12 @@ The Formatter class takes the account history as a parameter. It has reverse met
 
 ![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
 
- https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true
+__View__
+
+The View class takes the processed_history attribute from the Formatter class object and prints it to screen.
+
+![Alt text](https://github.com/noel1uk/bank-tech-test/blob/images/images/formatter.png?raw=true "Optional Title")
+
 ## User stories
 
 ```
